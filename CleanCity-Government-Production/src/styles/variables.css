@@ -1,0 +1,35 @@
+/* variables.css — colours and sizes used by every other stylesheet.
+   Theme: light blue + white, dark blue text (government-service style). */
+
+:root {
+  /* Main palette */
+  --bg: #F5FAFF;            /* page background */
+  --blue-light: #E6F4FF;    /* light blue surfaces, hover */
+  --primary: #1976D2;       /* primary blue (buttons, links) */
+  --primary-strong: #0F5DB0;/* hover / pressed */
+  --heading: #123B5D;       /* dark blue headings and text */
+  --text: #123B5D;
+  --text-soft: #4A6277;     /* secondary text (contrast 5.9:1 on white) */
+  --surface: #FFFFFF;       /* cards */
+  --border: #D6E6F2;
+  --border-strong: #AFC8DC;
+
+  /* Status and feedback colours (text on matching light background) */
+  --pending: #8A5A00;   --pending-bg: #FFF4D6;
+  --progress: #0D47A1;  --progress-bg: #E3F2FD;
+  --resolved: #1B5E20;  --resolved-bg: #E6F4EA;
+  --danger: #B3261E;    --danger-bg: #FDECEA;
+  --success: #1B5E20;   --success-bg: #E6F4EA;
+  --warning: #8A5A00;   --warning-bg: #FFF4D6;
+
+  /* Typography */
+  --font: 'Inter', 'Segoe UI', Arial, sans-serif;
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --container: 1180px;
+  --shadow-card: 0 1px 3px rgba(18, 59, 93, 0.08);
+  --bottom-nav-height: 64px;
+}
