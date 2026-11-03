@@ -1,0 +1,13 @@
+{
+  "name": "CleanCity — Citizen Waste Reporting Portal",
+  "short_name": "CleanCity",
+  "description": "Report garbage with a photo and GPS location, and track the report until it is resolved.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5FAFF",
+  "theme_color": "#1976D2",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

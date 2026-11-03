@@ -1,0 +1,79 @@
+/* base.css — reset and global typography */
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  color: var(--heading);
+}
+h1 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0 0 1em; color: var(--text-soft); max-width: 70ch; }
+a { color: var(--primary); text-decoration: none; }
+button { font-family: var(--font); cursor: pointer; }
+input, select, textarea { font-family: var(--font); font-size: 1rem; color: var(--text); }
+img { max-width: 100%; display: block; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+:focus-visible { outline: 3px solid #7DB8F0; outline-offset: 2px; }
+
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+.app-main { flex: 1; }
+
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+.section { padding-top: 28px; padding-bottom: 56px; }
+.section-divided { border-top: 1px solid var(--border); }
+.section-head { max-width: 640px; margin-bottom: 28px; }
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.mono { font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace; }
+.muted { color: var(--text-soft); font-size: 0.88rem; }
+.hint { font-size: 0.85rem; color: var(--text-soft); margin: 10px 0 0; }
+.center { text-align: center; }
+.no-margin { margin: 0; }
+
+/* Hidden visually but still available to screen readers and file pickers */
+.visually-hidden {
+  position: absolute;
+  left: 0; top: 0;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: -999px; top: 8px;
+  background: var(--primary); color: #fff; padding: 8px 14px; border-radius: var(--radius-sm); z-index: 100;
+}
+.skip-link:focus { left: 8px; }
+
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+  .section { padding-top: 20px; padding-bottom: 40px; }
+}
